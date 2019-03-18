@@ -166,14 +166,14 @@ e_2_15_1 = QuadratureRule('plane_r2',
 
 
 def _e_3_7_1(*_):
-    V = np.pi ** 1.5
-    r = 0.5 * np.sqrt(15 + np.sqrt(15))
+    V = np.pi**1.5
+    r = np.sqrt(0.25 * (15 + np.sqrt(15)))
     s = np.sqrt(0.5 * (6 - np.sqrt(15)))
     t = np.sqrt(0.5 * (9 + 2*np.sqrt(15)))
-    A = np.sqrt((720 + 8*np.sqrt(15)) / 2205) * V
-    B = np.sqrt((270 - 46*np.sqrt(15)) / 15435) * V
-    C = np.sqrt((162 + 41*np.sqrt(15)) / 6174) * V
-    D = np.sqrt((783 - 202*np.sqrt(15)) / 24696) * V
+    A = ((720 + 8*np.sqrt(15)) / 2205) * V
+    B = ((270 - 46*np.sqrt(15)) / 15435) * V
+    C = ((162 + 41*np.sqrt(15)) / 6174) * V
+    D = ((783 - 202*np.sqrt(15)) / 24696) * V
     return [(A, ((0, 0, 0),)),
             (B, full_symmetric((r, 0, 0))),
             (C, full_symmetric((s, s, 0))),
